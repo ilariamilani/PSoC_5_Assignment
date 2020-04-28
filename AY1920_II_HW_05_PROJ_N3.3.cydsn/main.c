@@ -48,16 +48,7 @@
 #define LIS3DH_NORMAL_MODE_CTRL_REG1 0x57 //0101 to set 100hz
                                           //0111 normal or high res mode and axis enabled
 
-/**
-*   \brief  Address of the Temperature Sensor Configuration register
-*/
-// #define LIS3DH_TEMP_CFG_REG 0x1F
 
-// #define LIS3DH_TEMP_CFG_REG_ACTIVE 0xC0
-
-/**
-*   \brief Address of the Control register 4
-*/
 #define LIS3DH_CTRL_REG4 0x23 
 
 #define LIS3DH_CTRL_REG4_ACTIVE 0x9B // set BDU active, ±4.0 g FSR, high resol mode 
@@ -297,6 +288,7 @@ int main(void)
                                                        // then I will divide it for 10000 in the Bridge Control Panel
                                                        // testing it with *2/128/G/10000, I have a result with decimals,
                                                        // which are not visible with the values currently setted
+            
             OutArray_ms2[1] = (uint8_t)(OutX_ms2 & 0xFF);
             OutArray_ms2[2] = (uint8_t)(OutX_ms2 >> 8);
             
