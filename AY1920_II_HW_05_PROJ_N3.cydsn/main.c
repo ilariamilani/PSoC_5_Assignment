@@ -49,13 +49,6 @@
                                           //0111 normal or high res mode and axis enabled
 
 /**
-*   \brief  Address of the Temperature Sensor Configuration register
-*/
-// #define LIS3DH_TEMP_CFG_REG 0x1F
-
-// #define LIS3DH_TEMP_CFG_REG_ACTIVE 0xC0
-
-/**
 *   \brief Address of the Control register 4
 */
 #define LIS3DH_CTRL_REG4 0x23 
@@ -71,15 +64,6 @@
 #define LIS3DH_OUT_Y_H 0x2B
 #define LIS3DH_OUT_Z_L 0x2C
 #define LIS3DH_OUT_Z_H 0x2D
-/**
-*   \brief Address of the ADC output LSB register
-*/
-// #define LIS3DH_OUT_ADC_3L 0x0C
-
-/**
-*   \brief Address of the ADC output MSB register
-*/
-// #define LIS3DH_OUT_ADC_3H 0x0D
 
 int main(void)
 {
@@ -294,8 +278,11 @@ int main(void)
             //OutArray[1] = (uint8_t)(OutX & 0xFF);
             //OutArray[2] = (uint8_t)(OutX >> 8);
             
-            OutX_mg = ((int16)((Data[0] | (Data[1]<<8)))>>4)*2/16; // 2 mg/digit --> *2/16 ( for the 4g FSR at HRM )
-                                                                   // shift >>4 with the high resol mode, the info is in 12 bits, no more in 10
+            OutX_mg = ((int16)((Data[0] | (Data[1]<<8)))>>4)*2/16;  // 2 mg/digit --> *2/16 ( for the 4g FSR at HRM )
+                                                                    // shift >>4 with the high resol mode, the info is in 12 bits, no more in 10
+                                                                    // using 2/16 : error in the output value, to make it correct-ish I should do *2/128, 
+                                                                    // then the value on the Z axis would be around 9.8
+                                                                    // same for the other 2 axis
             OutArray_mg[1] = (uint8_t)(OutX_mg & 0xFF);
             OutArray_mg[2] = (uint8_t)(OutX_mg >> 8);
             
@@ -341,8 +328,6 @@ int main(void)
     
     }
 }
-
-// error in the output value, to make it correct-ish I should do *4/128, then the value on the Z axis would be around 9.8
 
 
 /* [] END OF FILE */

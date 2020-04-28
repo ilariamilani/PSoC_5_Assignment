@@ -280,7 +280,11 @@ int main(void)
             //OutArray[1] = (uint8_t)(OutX & 0xFF);
             //OutArray[2] = (uint8_t)(OutX >> 8);
             
-            OutX_mg = ((int16)((Data[0] | (Data[1]<<8)))>>6)*4/16; // 4 mg/digit --> *4/16
+            OutX_mg = ((int16)((Data[0] | (Data[1]<<8)))>>6)*4/16;  // 4 mg/digit --> *4/16 ( for the 2g FSR at NM )
+                                                                    // shift >>6 with the normal mode, the info is in 10 bits
+                                                                    // using 4/16 : error in the output value, to make it correct-ish I should do *2/128, 
+                                                                    // then the value on the Z axis would be around 9.8
+                                                                    // same for the other 2 axis
             OutArray_mg[1] = (uint8_t)(OutX_mg & 0xFF);
             OutArray_mg[2] = (uint8_t)(OutX_mg >> 8);
             
@@ -298,7 +302,7 @@ int main(void)
             //OutArray[3] = (uint8_t)(OutY & 0xFF);
             //OutArray[4] = (uint8_t)(OutY >> 8);
             
-            OutY_mg = ((int16)((Data[2] | (Data[3]<<8)))>>6)*4/16; // 4 mg/digit --> *4/16
+            OutY_mg = ((int16)((Data[2] | (Data[3]<<8)))>>6)*4/16; 
             OutArray_mg[3] = (uint8_t)(OutY_mg & 0xFF);
             OutArray_mg[4] = (uint8_t)(OutY_mg >> 8);
         }
@@ -315,7 +319,7 @@ int main(void)
             //OutArray[5] = (uint8_t)(OutZ & 0xFF);
             //OutArray[6] = (uint8_t)(OutZ >> 8);
             
-            OutZ_mg = ((int16)((Data[4] | (Data[5]<<8)))>>6)*4/16; // 4 mg/digit --> *4/16
+            OutZ_mg = ((int16)((Data[4] | (Data[5]<<8)))>>6)*4/16;
             OutArray_mg[5] = (uint8_t)(OutZ_mg & 0xFF);
             OutArray_mg[6] = (uint8_t)(OutZ_mg >> 8);
         }
@@ -326,8 +330,5 @@ int main(void)
     
     }
 }
-
-// error in the output value, to make it correct-ish I should do *4/128, then the value on the Z axis would be around 9.8
-
 
 /* [] END OF FILE */

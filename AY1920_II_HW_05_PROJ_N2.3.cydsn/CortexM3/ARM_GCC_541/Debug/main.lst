@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
   28:main.c        **** *   \brief Address of the Status register
   29:main.c        **** */
   30:main.c        **** #define LIS3DH_STATUS_REG 0x27
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 2
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 2
 
 
   31:main.c        **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
   40              	@ 72 "main.c" 1
   41 0004 62B6     		CPSIE   i
   42              	@ 0 "" 2
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 3
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 3
 
 
   73:main.c        **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
   78 0030 0134     		adds	r4, r4, #1
   79              	.LVL7:
   80              	.L2:
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 4
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 4
 
 
   84:main.c        ****     {
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  112:main.c        ****     }
  113:main.c        ****     
  114:main.c        ****     /*      I2C Reading Status Register       */
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 5
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 5
 
 
  115:main.c        ****     
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  146              	.LVL22:
  136:main.c        ****                                         LIS3DH_CTRL_REG1,
  137:main.c        ****                                         &ctrl_reg1);
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 6
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 6
 
 
  138:main.c        ****     
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  159:main.c        ****     
  160:main.c        ****         error = I2C_Peripheral_WriteRegister(LIS3DH_DEVICE_ADDRESS,
  180              		.loc 1 160 0
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 7
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 7
 
 
  181 00c2 2021     		movs	r1, #32
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  183:main.c        ****     if (error == NO_ERROR)
  213              		.loc 1 183 0
  214 00f2 48B9     		cbnz	r0, .L13
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 8
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 8
 
 
  184:main.c        ****     {
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  246 0120 05A8     		add	r0, sp, #20
  247              	.LVL45:
  248 0122 FFF7FEFF 		bl	sprintf
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 9
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 9
 
 
  249              	.LVL46:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  281              		.loc 1 228 0
  282 0150 9DF81020 		ldrb	r2, [sp, #16]	@ zero_extendqisi2
  283 0154 4449     		ldr	r1, .L28+52
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 10
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 10
 
 
  284 0156 05A8     		add	r0, sp, #20
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  310 0178 FFF7FEFF 		bl	CyDelay
  311              	.LVL60:
  257:main.c        ****         
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 11
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 11
 
 
  258:main.c        ****         /*      I2C Reading Status Register       */
@@ -649,7 +649,7 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  280:main.c        ****             //OutArray[1] = (uint8_t)(OutX & 0xFF);
  281:main.c        ****             //OutArray[2] = (uint8_t)(OutX >> 8);
  282:main.c        ****             
- 283:main.c        ****             OutX_mg = ((int16)((Data[0] | (Data[1]<<8)))>>6)*4/16; // 4 mg/digit --> *4/16
+ 283:main.c        ****             OutX_mg = ((int16)((Data[0] | (Data[1]<<8)))>>6)*4/16;  // 4 mg/digit --> *4/16 ( for t
  335              		.loc 1 283 0
  336 019e 9DF80830 		ldrb	r3, [sp, #8]	@ zero_extendqisi2
  337 01a2 9DF80920 		ldrb	r2, [sp, #9]	@ zero_extendqisi2
@@ -658,28 +658,32 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  340 01ae 9B00     		lsls	r3, r3, #2
  341 01b0 00D5     		bpl	.L21
  342 01b2 0F33     		adds	r3, r3, #15
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 12
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 12
 
 
  343              	.L21:
  344 01b4 1B11     		asrs	r3, r3, #4
  345              	.LVL65:
- 284:main.c        ****             OutArray_mg[1] = (uint8_t)(OutX_mg & 0xFF);
- 346              		.loc 1 284 0
+ 284:main.c        ****                                                                     // shift >>6 with the normal mo
+ 285:main.c        ****                                                                     // using 4/16 : error in the ou
+ 286:main.c        ****                                                                     // then the value on the Z axis
+ 287:main.c        ****                                                                     // same for the other 2 axis
+ 288:main.c        ****             OutArray_mg[1] = (uint8_t)(OutX_mg & 0xFF);
+ 346              		.loc 1 288 0
  347 01b6 8DF80130 		strb	r3, [sp, #1]
- 285:main.c        ****             OutArray_mg[2] = (uint8_t)(OutX_mg >> 8);
- 348              		.loc 1 285 0
+ 289:main.c        ****             OutArray_mg[2] = (uint8_t)(OutX_mg >> 8);
+ 348              		.loc 1 289 0
  349 01ba C3F30723 		ubfx	r3, r3, #8, #8
  350              	.LVL66:
  351 01be 8DF80230 		strb	r3, [sp, #2]
  352              	.L20:
- 286:main.c        ****             
- 287:main.c        ****         }
- 288:main.c        ****         }
- 289:main.c        ****         if((LIS3DH_STATUS_REG & LIS3DH_STATUS_REG_NEWDATAY) == LIS3DH_STATUS_REG_NEWDATAY)
- 290:main.c        ****         {
- 291:main.c        ****             error = I2C_Peripheral_ReadRegisterMulti(LIS3DH_DEVICE_ADDRESS,
- 353              		.loc 1 291 0
+ 290:main.c        ****             
+ 291:main.c        ****         }
+ 292:main.c        ****         }
+ 293:main.c        ****         if((LIS3DH_STATUS_REG & LIS3DH_STATUS_REG_NEWDATAY) == LIS3DH_STATUS_REG_NEWDATAY)
+ 294:main.c        ****         {
+ 295:main.c        ****             error = I2C_Peripheral_ReadRegisterMulti(LIS3DH_DEVICE_ADDRESS,
+ 353              		.loc 1 295 0
  354 01c2 0DF10A03 		add	r3, sp, #10
  355 01c6 0222     		movs	r2, #2
  356 01c8 2A21     		movs	r1, #42
@@ -687,19 +691,19 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  358              	.LVL67:
  359 01cc FFF7FEFF 		bl	I2C_Peripheral_ReadRegisterMulti
  360              	.LVL68:
- 292:main.c        ****                                                  LIS3DH_OUT_Y_L,
- 293:main.c        ****                                                  2, // 2 byte to be read
- 294:main.c        ****                                                  &Data[2]);
- 295:main.c        ****             if(error == NO_ERROR)
- 361              		.loc 1 295 0
+ 296:main.c        ****                                                  LIS3DH_OUT_Y_L,
+ 297:main.c        ****                                                  2, // 2 byte to be read
+ 298:main.c        ****                                                  &Data[2]);
+ 299:main.c        ****             if(error == NO_ERROR)
+ 361              		.loc 1 299 0
  362 01d0 88B9     		cbnz	r0, .L22
- 296:main.c        ****         {
- 297:main.c        ****             //OutY = (int16)((Data[2] | (Data[3]<<8)))>>6;
- 298:main.c        ****             //OutArray[3] = (uint8_t)(OutY & 0xFF);
- 299:main.c        ****             //OutArray[4] = (uint8_t)(OutY >> 8);
- 300:main.c        ****             
- 301:main.c        ****             OutY_mg = ((int16)((Data[2] | (Data[3]<<8)))>>6)*4/16; // 4 mg/digit --> *4/16
- 363              		.loc 1 301 0
+ 300:main.c        ****         {
+ 301:main.c        ****             //OutY = (int16)((Data[2] | (Data[3]<<8)))>>6;
+ 302:main.c        ****             //OutArray[3] = (uint8_t)(OutY & 0xFF);
+ 303:main.c        ****             //OutArray[4] = (uint8_t)(OutY >> 8);
+ 304:main.c        ****             
+ 305:main.c        ****             OutY_mg = ((int16)((Data[2] | (Data[3]<<8)))>>6)*4/16; 
+ 363              		.loc 1 305 0
  364 01d2 9DF80A30 		ldrb	r3, [sp, #10]	@ zero_extendqisi2
  365 01d6 9DF80B20 		ldrb	r2, [sp, #11]	@ zero_extendqisi2
  366 01da 43EA0223 		orr	r3, r3, r2, lsl #8
@@ -710,24 +714,24 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  371              	.L23:
  372 01e8 1B11     		asrs	r3, r3, #4
  373              	.LVL69:
- 302:main.c        ****             OutArray_mg[3] = (uint8_t)(OutY_mg & 0xFF);
- 374              		.loc 1 302 0
+ 306:main.c        ****             OutArray_mg[3] = (uint8_t)(OutY_mg & 0xFF);
+ 374              		.loc 1 306 0
  375 01ea 8DF80330 		strb	r3, [sp, #3]
- 303:main.c        ****             OutArray_mg[4] = (uint8_t)(OutY_mg >> 8);
- 376              		.loc 1 303 0
+ 307:main.c        ****             OutArray_mg[4] = (uint8_t)(OutY_mg >> 8);
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 13
+
+
+ 376              		.loc 1 307 0
  377 01ee C3F30723 		ubfx	r3, r3, #8, #8
  378              	.LVL70:
  379 01f2 8DF80430 		strb	r3, [sp, #4]
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 13
-
-
  380              	.L22:
- 304:main.c        ****         }
- 305:main.c        ****         }
- 306:main.c        ****         if((LIS3DH_STATUS_REG & LIS3DH_STATUS_REG_NEWDATAZ) == LIS3DH_STATUS_REG_NEWDATAZ)
- 307:main.c        ****         {
- 308:main.c        ****             error = I2C_Peripheral_ReadRegisterMulti(LIS3DH_DEVICE_ADDRESS,
- 381              		.loc 1 308 0
+ 308:main.c        ****         }
+ 309:main.c        ****         }
+ 310:main.c        ****         if((LIS3DH_STATUS_REG & LIS3DH_STATUS_REG_NEWDATAZ) == LIS3DH_STATUS_REG_NEWDATAZ)
+ 311:main.c        ****         {
+ 312:main.c        ****             error = I2C_Peripheral_ReadRegisterMulti(LIS3DH_DEVICE_ADDRESS,
+ 381              		.loc 1 312 0
  382 01f6 03AB     		add	r3, sp, #12
  383 01f8 0222     		movs	r2, #2
  384 01fa 2C21     		movs	r1, #44
@@ -735,19 +739,19 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  386              	.LVL71:
  387 01fe FFF7FEFF 		bl	I2C_Peripheral_ReadRegisterMulti
  388              	.LVL72:
- 309:main.c        ****                                                  LIS3DH_OUT_Z_L,
- 310:main.c        ****                                                  2, // 2 byte to be read
- 311:main.c        ****                                                  &Data[4]);
- 312:main.c        ****             if(error == NO_ERROR)
- 389              		.loc 1 312 0
+ 313:main.c        ****                                                  LIS3DH_OUT_Z_L,
+ 314:main.c        ****                                                  2, // 2 byte to be read
+ 315:main.c        ****                                                  &Data[4]);
+ 316:main.c        ****             if(error == NO_ERROR)
+ 389              		.loc 1 316 0
  390 0202 88B9     		cbnz	r0, .L24
- 313:main.c        ****         {
- 314:main.c        ****             //OutZ = (int16)((Data[4] | (Data[5]<<8)))>>6;
- 315:main.c        ****             //OutArray[5] = (uint8_t)(OutZ & 0xFF);
- 316:main.c        ****             //OutArray[6] = (uint8_t)(OutZ >> 8);
- 317:main.c        ****             
- 318:main.c        ****             OutZ_mg = ((int16)((Data[4] | (Data[5]<<8)))>>6)*4/16; // 4 mg/digit --> *4/16
- 391              		.loc 1 318 0
+ 317:main.c        ****         {
+ 318:main.c        ****             //OutZ = (int16)((Data[4] | (Data[5]<<8)))>>6;
+ 319:main.c        ****             //OutArray[5] = (uint8_t)(OutZ & 0xFF);
+ 320:main.c        ****             //OutArray[6] = (uint8_t)(OutZ >> 8);
+ 321:main.c        ****             
+ 322:main.c        ****             OutZ_mg = ((int16)((Data[4] | (Data[5]<<8)))>>6)*4/16;
+ 391              		.loc 1 322 0
  392 0204 9DF80C30 		ldrb	r3, [sp, #12]	@ zero_extendqisi2
  393 0208 9DF80D20 		ldrb	r2, [sp, #13]	@ zero_extendqisi2
  394 020c 43EA0223 		orr	r3, r3, r2, lsl #8
@@ -758,32 +762,32 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  399              	.L25:
  400 021a 1B11     		asrs	r3, r3, #4
  401              	.LVL73:
- 319:main.c        ****             OutArray_mg[5] = (uint8_t)(OutZ_mg & 0xFF);
- 402              		.loc 1 319 0
+ 323:main.c        ****             OutArray_mg[5] = (uint8_t)(OutZ_mg & 0xFF);
+ 402              		.loc 1 323 0
  403 021c 8DF80530 		strb	r3, [sp, #5]
- 320:main.c        ****             OutArray_mg[6] = (uint8_t)(OutZ_mg >> 8);
- 404              		.loc 1 320 0
+ 324:main.c        ****             OutArray_mg[6] = (uint8_t)(OutZ_mg >> 8);
+ 404              		.loc 1 324 0
  405 0220 C3F30723 		ubfx	r3, r3, #8, #8
  406              	.LVL74:
  407 0224 8DF80630 		strb	r3, [sp, #6]
  408              	.L24:
- 321:main.c        ****         }
- 322:main.c        ****         }
- 323:main.c        **** 
- 324:main.c        ****         UART_Debug_PutArray(OutArray_mg, 8);
- 409              		.loc 1 324 0
+ 325:main.c        ****         }
+ 326:main.c        ****         }
+ 327:main.c        **** 
+ 328:main.c        ****         UART_Debug_PutArray(OutArray_mg, 8);
+ 409              		.loc 1 328 0
  410 0228 0821     		movs	r1, #8
  411 022a 6846     		mov	r0, sp
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 14
+
+
  412              	.LVL75:
  413 022c FFF7FEFF 		bl	UART_Debug_PutArray
  414              	.LVL76:
- 325:main.c        ****         
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 14
-
-
- 326:main.c        ****     
- 327:main.c        ****     }
- 415              		.loc 1 327 0
+ 329:main.c        ****         
+ 330:main.c        ****     
+ 331:main.c        ****     }
+ 415              		.loc 1 331 0
  416 0230 A1E7     		b	.L26
  417              	.L29:
  418 0232 00BF     		.align	2
@@ -834,13 +838,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  448      5445523A 
  448      20307825 
  449 0086 0000     		.space	2
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 15
+
+
  450              	.LC4:
  451 0088 4572726F 		.ascii	"Error occurred during I2C comm to read status regis"
  451      72206F63 
  451      63757272 
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 15
-
-
  451      65642064 
  451      7572696E 
  452 00bb 7465720D 		.ascii	"ter\015\012\000"
@@ -894,13 +898,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  472      20312061 
  473 01e3 580D0A00 		.ascii	"X\015\012\000"
  474 01e7 00       		.space	1
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 16
+
+
  475              	.LC11:
  476 01e8 434F4E54 		.ascii	"CONTROL REGISTER 4: 0x%02X\015\012\000"
  476      524F4C20 
  476      52454749 
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 16
-
-
  476      53544552 
  476      20343A20 
  477 0205 000000   		.space	3
@@ -954,13 +958,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  516 0031 02       		.byte	0x2
  517 0032 1D       		.byte	0x1d
  518 0033 37000000 		.4byte	0x37
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 17
+
+
  519 0037 02       		.uleb128 0x2
  520 0038 01       		.byte	0x1
  521 0039 08       		.byte	0x8
  522 003a 86000000 		.4byte	.LASF1
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 17
-
-
  523 003e 03       		.uleb128 0x3
  524 003f EA010000 		.4byte	.LASF3
  525 0043 02       		.byte	0x2
@@ -1014,13 +1018,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  573 009d 20       		.byte	0x20
  574 009e 3E000000 		.4byte	0x3e
  575 00a2 03       		.uleb128 0x3
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 18
+
+
  576 00a3 59020000 		.4byte	.LASF14
  577 00a7 03       		.byte	0x3
  578 00a8 2C       		.byte	0x2c
  579 00a9 57000000 		.4byte	0x57
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 18
-
-
  580 00ad 05       		.uleb128 0x5
  581 00ae 2A010000 		.4byte	.LASF15
  582 00b2 04       		.byte	0x4
@@ -1074,13 +1078,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  630 0113 01       		.uleb128 0x1
  631 0114 9C       		.byte	0x9c
  632 0115 2E060000 		.4byte	0x62e
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 19
+
+
  633 0119 09       		.uleb128 0x9
  634 011a 00000000 		.4byte	.LASF24
  635 011e 01       		.byte	0x1
  636 011f 51       		.byte	0x51
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 19
-
-
  637 0120 2E060000 		.4byte	0x62e
  638 0124 02       		.uleb128 0x2
  639 0125 91       		.byte	0x91
@@ -1134,13 +1138,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  687 0180 01       		.byte	0x1
  688 0181 F0       		.byte	0xf0
  689 0182 8C000000 		.4byte	0x8c
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 20
+
+
  690 0186 40       		.sleb128 -64
  691 0187 09       		.uleb128 0x9
  692 0188 84010000 		.4byte	.LASF32
  693 018c 01       		.byte	0x1
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 20
-
-
  694 018d F2       		.byte	0xf2
  695 018e 3E060000 		.4byte	0x63e
  696 0192 03       		.uleb128 0x3
@@ -1194,13 +1198,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  744 01fe 00       		.sleb128 0
  745 01ff 00       		.byte	0
  746 0200 0E       		.uleb128 0xe
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 21
+
+
  747 0201 2A000000 		.4byte	.LVL5
  748 0205 7A060000 		.4byte	0x67a
  749 0209 23020000 		.4byte	0x223
  750 020d 0F       		.uleb128 0xf
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 21
-
-
  751 020e 01       		.uleb128 0x1
  752 020f 50       		.byte	0x50
  753 0210 02       		.uleb128 0x2
@@ -1254,13 +1258,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  801 0267 01       		.uleb128 0x1
  802 0268 50       		.byte	0x50
  803 0269 01       		.uleb128 0x1
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 22
+
+
  804 026a 48       		.byte	0x48
  805 026b 0F       		.uleb128 0xf
  806 026c 01       		.uleb128 0x1
  807 026d 51       		.byte	0x51
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 22
-
-
  808 026e 01       		.uleb128 0x1
  809 026f 3F       		.byte	0x3f
  810 0270 0F       		.uleb128 0xf
@@ -1314,13 +1318,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  858 02c4 B1060000 		.4byte	0x6b1
  859 02c8 DE020000 		.4byte	0x2de
  860 02cc 0F       		.uleb128 0xf
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 23
+
+
  861 02cd 01       		.uleb128 0x1
  862 02ce 50       		.byte	0x50
  863 02cf 01       		.uleb128 0x1
  864 02d0 48       		.byte	0x48
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 23
-
-
  865 02d1 0F       		.uleb128 0xf
  866 02d2 01       		.uleb128 0x1
  867 02d3 51       		.byte	0x51
@@ -1374,13 +1378,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  915 0321 88000000 		.4byte	.LC4
  916 0325 00       		.byte	0
  917 0326 0E       		.uleb128 0xe
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 24
+
+
  918 0327 92000000 		.4byte	.LVL22
  919 032b B1060000 		.4byte	0x6b1
  920 032f 45030000 		.4byte	0x345
  921 0333 0F       		.uleb128 0xf
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 24
-
-
  922 0334 01       		.uleb128 0x1
  923 0335 50       		.byte	0x50
  924 0336 01       		.uleb128 0x1
@@ -1434,13 +1438,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  972 0384 01       		.uleb128 0x1
  973 0385 50       		.byte	0x50
  974 0386 05       		.uleb128 0x5
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 25
+
+
  975 0387 03       		.byte	0x3
  976 0388 E4000000 		.4byte	.LC6
  977 038c 00       		.byte	0
  978 038d 0E       		.uleb128 0xe
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 25
-
-
  979 038e B4000000 		.4byte	.LVL29
  980 0392 85060000 		.4byte	0x685
  981 0396 A4030000 		.4byte	0x3a4
@@ -1494,13 +1498,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  1029 03e1 DE000000 		.4byte	.LVL33
  1030 03e5 85060000 		.4byte	0x685
  1031 03e9 F4030000 		.4byte	0x3f4
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 26
+
+
  1032 03ed 0F       		.uleb128 0xf
  1033 03ee 01       		.uleb128 0x1
  1034 03ef 50       		.byte	0x50
  1035 03f0 02       		.uleb128 0x2
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 26
-
-
  1036 03f1 91       		.byte	0x91
  1037 03f2 44       		.sleb128 -60
  1038 03f3 00       		.byte	0
@@ -1554,13 +1558,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  1086 0441 03       		.byte	0x3
  1087 0442 B0010000 		.4byte	.LC10
  1088 0446 00       		.byte	0
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 27
+
+
  1089 0447 0E       		.uleb128 0xe
  1090 0448 06010000 		.4byte	.LVL40
  1091 044c 85060000 		.4byte	0x685
  1092 0450 5B040000 		.4byte	0x45b
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 27
-
-
  1093 0454 0F       		.uleb128 0xf
  1094 0455 01       		.uleb128 0x1
  1095 0456 50       		.byte	0x50
@@ -1614,13 +1618,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  1143 04a4 0F       		.uleb128 0xf
  1144 04a5 01       		.uleb128 0x1
  1145 04a6 51       		.byte	0x51
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 28
+
+
  1146 04a7 05       		.uleb128 0x5
  1147 04a8 03       		.byte	0x3
  1148 04a9 E8010000 		.4byte	.LC11
  1149 04ad 00       		.byte	0
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 28
-
-
  1150 04ae 0E       		.uleb128 0xe
  1151 04af 2C010000 		.4byte	.LVL47
  1152 04b3 85060000 		.4byte	0x685
@@ -1674,13 +1678,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  1200 0507 50       		.byte	0x50
  1201 0508 01       		.uleb128 0x1
  1202 0509 48       		.byte	0x48
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 29
+
+
  1203 050a 0F       		.uleb128 0xf
  1204 050b 01       		.uleb128 0x1
  1205 050c 51       		.byte	0x51
  1206 050d 02       		.uleb128 0x2
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 29
-
-
  1207 050e 08       		.byte	0x8
  1208 050f 23       		.byte	0x23
  1209 0510 0F       		.uleb128 0xf
@@ -1734,13 +1738,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  1257 0564 A6060000 		.4byte	0x6a6
  1258 0568 73050000 		.4byte	0x573
  1259 056c 0F       		.uleb128 0xf
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 30
+
+
  1260 056d 01       		.uleb128 0x1
  1261 056e 50       		.byte	0x50
  1262 056f 02       		.uleb128 0x2
  1263 0570 08       		.byte	0x8
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 30
-
-
  1264 0571 64       		.byte	0x64
  1265 0572 00       		.byte	0
  1266 0573 0E       		.uleb128 0xe
@@ -1794,13 +1798,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  1314 05c1 0F       		.uleb128 0xf
  1315 05c2 01       		.uleb128 0x1
  1316 05c3 52       		.byte	0x52
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 31
+
+
  1317 05c4 01       		.uleb128 0x1
  1318 05c5 32       		.byte	0x32
  1319 05c6 0F       		.uleb128 0xf
  1320 05c7 01       		.uleb128 0x1
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 31
-
-
  1321 05c8 53       		.byte	0x53
  1322 05c9 03       		.uleb128 0x3
  1323 05ca 91       		.byte	0x91
@@ -1854,13 +1858,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  1371 060e 01       		.uleb128 0x1
  1372 060f 32       		.byte	0x32
  1373 0610 0F       		.uleb128 0xf
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 32
+
+
  1374 0611 01       		.uleb128 0x1
  1375 0612 53       		.byte	0x53
  1376 0613 03       		.uleb128 0x3
  1377 0614 91       		.byte	0x91
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 32
-
-
  1378 0615 BC7F     		.sleb128 -68
  1379 0617 00       		.byte	0
  1380 0618 10       		.uleb128 0x10
@@ -1914,13 +1918,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  1428 0679 5D       		.byte	0x5d
  1429 067a 16       		.uleb128 0x16
  1430 067b 11030000 		.4byte	.LASF38
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 33
+
+
  1431 067f 11030000 		.4byte	.LASF38
  1432 0683 07       		.byte	0x7
  1433 0684 E7       		.byte	0xe7
  1434 0685 16       		.uleb128 0x16
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 33
-
-
  1435 0686 19000000 		.4byte	.LASF39
  1436 068a 19000000 		.4byte	.LASF39
  1437 068e 08       		.byte	0x8
@@ -1974,13 +1978,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  1485 0008 0E       		.uleb128 0xe
  1486 0009 1B       		.uleb128 0x1b
  1487 000a 0E       		.uleb128 0xe
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 34
+
+
  1488 000b 55       		.uleb128 0x55
  1489 000c 17       		.uleb128 0x17
  1490 000d 11       		.uleb128 0x11
  1491 000e 01       		.uleb128 0x1
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 34
-
-
  1492 000f 10       		.uleb128 0x10
  1493 0010 17       		.uleb128 0x17
  1494 0011 00       		.byte	0
@@ -2034,13 +2038,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  1542 0041 00       		.byte	0
  1543 0042 00       		.byte	0
  1544 0043 06       		.uleb128 0x6
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 35
+
+
  1545 0044 04       		.uleb128 0x4
  1546 0045 01       		.byte	0x1
  1547 0046 0B       		.uleb128 0xb
  1548 0047 0B       		.uleb128 0xb
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 35
-
-
  1549 0048 49       		.uleb128 0x49
  1550 0049 13       		.uleb128 0x13
  1551 004a 3A       		.uleb128 0x3a
@@ -2094,13 +2098,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  1599 007c 00       		.byte	0
  1600 007d 03       		.uleb128 0x3
  1601 007e 0E       		.uleb128 0xe
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 36
+
+
  1602 007f 3A       		.uleb128 0x3a
  1603 0080 0B       		.uleb128 0xb
  1604 0081 3B       		.uleb128 0x3b
  1605 0082 0B       		.uleb128 0xb
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 36
-
-
  1606 0083 49       		.uleb128 0x49
  1607 0084 13       		.uleb128 0x13
  1608 0085 02       		.uleb128 0x2
@@ -2154,13 +2158,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  1656 00b5 03       		.uleb128 0x3
  1657 00b6 08       		.uleb128 0x8
  1658 00b7 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 37
+
+
  1659 00b8 0B       		.uleb128 0xb
  1660 00b9 3B       		.uleb128 0x3b
  1661 00ba 0B       		.uleb128 0xb
  1662 00bb 49       		.uleb128 0x49
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 37
-
-
  1663 00bc 13       		.uleb128 0x13
  1664 00bd 02       		.uleb128 0x2
  1665 00be 17       		.uleb128 0x17
@@ -2214,13 +2218,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  1713 00f7 00       		.byte	0
  1714 00f8 00       		.byte	0
  1715 00f9 13       		.uleb128 0x13
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 38
+
+
  1716 00fa 21       		.uleb128 0x21
  1717 00fb 00       		.byte	0
  1718 00fc 49       		.uleb128 0x49
  1719 00fd 13       		.uleb128 0x13
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 38
-
-
  1720 00fe 2F       		.uleb128 0x2f
  1721 00ff 0B       		.uleb128 0xb
  1722 0100 00       		.byte	0
@@ -2274,13 +2278,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  1770 0004 4C000000 		.4byte	.LVL9
  1771 0008 0100     		.2byte	0x1
  1772 000a 50       		.byte	0x50
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 39
+
+
  1773 000b 58000000 		.4byte	.LVL12
  1774 000f 5A000000 		.4byte	.LVL13
  1775 0013 0100     		.2byte	0x1
  1776 0015 50       		.byte	0x50
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 39
-
-
  1777 0016 6A000000 		.4byte	.LVL15
  1778 001a 74000000 		.4byte	.LVL16
  1779 001e 0100     		.2byte	0x1
@@ -2334,13 +2338,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  1827 00a2 0100     		.2byte	0x1
  1828 00a4 50       		.byte	0x50
  1829 00a5 9C010000 		.4byte	.LVL64
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 40
+
+
  1830 00a9 CC010000 		.4byte	.LVL67
  1831 00ad 0100     		.2byte	0x1
  1832 00af 50       		.byte	0x50
  1833 00b0 D0010000 		.4byte	.LVL68
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 40
-
-
  1834 00b4 FE010000 		.4byte	.LVL71
  1835 00b8 0100     		.2byte	0x1
  1836 00ba 50       		.byte	0x50
@@ -2394,13 +2398,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  1884 0010 00000000 		.4byte	.LFB64
  1885 0014 6C020000 		.4byte	.LFE64-.LFB64
  1886 0018 00000000 		.4byte	0
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 41
+
+
  1887 001c 00000000 		.4byte	0
  1888              		.section	.debug_ranges,"",%progbits
  1889              	.Ldebug_ranges0:
  1890 0000 00000000 		.4byte	.LFB64
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 41
-
-
  1891 0004 6C020000 		.4byte	.LFE64
  1892 0008 00000000 		.4byte	0
  1893 000c 00000000 		.4byte	0
@@ -2454,13 +2458,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  1915              	.LASF16:
  1916 0080 666C6F61 		.ascii	"float\000"
  1916      7400
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 42
+
+
  1917              	.LASF1:
  1918 0086 756E7369 		.ascii	"unsigned char\000"
  1918      676E6564 
  1918      20636861 
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 42
-
-
  1918      7200
  1919              	.LASF47:
  1920 0094 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
@@ -2514,13 +2518,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  1939              	.LASF44:
  1940 0189 4932435F 		.ascii	"I2C_Peripheral_WriteRegister\000"
  1940      50657269 
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 43
+
+
  1940      70686572 
  1940      616C5F57 
  1940      72697465 
  1941              	.LASF50:
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 43
-
-
  1942 01a6 6D61696E 		.ascii	"main\000"
  1942      00
  1943              	.LASF49:
@@ -2574,13 +2578,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  1963      65676973 
  1963      74657200 
  1964              	.LASF14:
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 44
+
+
  1965 0259 696E7433 		.ascii	"int32_t\000"
  1965      325F7400 
  1966              	.LASF23:
  1967 0261 73697A65 		.ascii	"sizetype\000"
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 44
-
-
  1967      74797065 
  1967      00
  1968              	.LASF26:
@@ -2634,13 +2638,13 @@ ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 1
  1993 02ec 7369676E 		.ascii	"signed char\000"
  1993      65642063 
  1993      68617200 
+ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccZGV2yb.s 			page 45
+
+
  1994              	.LASF36:
  1995 02f8 4F757441 		.ascii	"OutArray_mg\000"
  1995      72726179 
  1995      5F6D6700 
-ARM GAS  C:\Users\ilami\AppData\Local\Temp\ccOZtpY3.s 			page 45
-
-
  1996              	.LASF25:
  1997 0304 77686F5F 		.ascii	"who_am_i_reg\000"
  1997      616D5F69 
