@@ -1,0 +1,95 @@
+commit dd2591f80ccfc22e7d16f9a30e37de3b97c1fbcc
+Author: ilariamilani <64140046+ilariamilani@users.noreply.github.com>
+Date:   Tue Apr 28 17:47:59 2020 +0200
+
+    create ReadMe
+
+commit 32935d5858d9c0810670ab3fb828455aa915d122
+Author: ilaria <ilaria1.milani@mail.polimi.it>
+Date:   Tue Apr 28 17:38:03 2020 +0200
+
+    modified G name
+
+commit b407637838437134446ea59d10669398cea3b4c2
+Author: ilaria <ilaria1.milani@mail.polimi.it>
+Date:   Tue Apr 28 17:24:43 2020 +0200
+
+    fixing some comments
+
+commit 77ade0cc71d8e32b938cbd134e491770f54356d4
+Author: ilaria <ilaria1.milani@mail.polimi.it>
+Date:   Tue Apr 28 16:55:15 2020 +0200
+
+    adding files bridge control panel pro 3
+
+commit 64e620b2ce8463cfff1c8180426d8f28faf80abf
+Author: ilaria <ilaria1.milani@mail.polimi.it>
+Date:   Tue Apr 28 16:50:00 2020 +0200
+
+    values in prog 3 in m/s^2
+
+commit 98a466a959504962b3cad897032ec66c5c738d6d
+Author: ilaria <ilaria1.milani@mail.polimi.it>
+Date:   Tue Apr 28 15:39:12 2020 +0200
+
+    setting high resolution mode, proj 3.1 and 3.2
+
+commit a5be7de52f42cc280514a217eb8ed654eb8cb48c
+Author: ilaria <ilaria1.milani@mail.polimi.it>
+Date:   Tue Apr 28 15:08:43 2020 +0200
+
+    adding bridge control panel proj 2
+
+commit fa703259d0b1335feb7fe6d286d1eefd4e7596dc
+Author: ilaria <ilaria1.milani@mail.polimi.it>
+Date:   Tue Apr 28 14:54:18 2020 +0200
+
+    mg values and baud rate considerations
+
+commit 65485501abb6b558511564619a724f75b453f1a1
+Author: ilaria <ilaria1.milani@mail.polimi.it>
+Date:   Tue Apr 28 14:22:48 2020 +0200
+
+    proj 2.3
+
+commit b31eaa56aeeb8daed4c43e6775eb29cdbf090920
+Author: ilaria <ilaria1.milani@mail.polimi.it>
+Date:   Tue Apr 28 12:36:35 2020 +0200
+
+    separation between pr 2.1 and 2.2, in the latter addition of status reg check
+
+commit 234403447ae8e2ffba47f09042e7eb84e8d8a8d5
+Author: ilaria <ilaria1.milani@mail.polimi.it>
+Date:   Tue Apr 28 12:19:56 2020 +0200
+
+    project 2.2
+
+commit 437fa386aa57e4e3f11734018bd6674573a418b3
+Author: ilaria <ilaria1.milani@mail.polimi.it>
+Date:   Tue Apr 28 11:30:22 2020 +0200
+
+    project 2.1 and 2.1: set registers and reading outputs
+
+commit b949282130941a286e9beff764f43053e49ef404
+Author: ilaria <ilaria1.milani@mail.polimi.it>
+Date:   Tue Apr 28 02:16:05 2020 +0200
+
+    project 2.1: set control register
+
+commit 56982ade54fea3d7323db2950f87024632698bf3
+Author: ilaria <ilaria1.milani@mail.polimi.it>
+Date:   Tue Apr 28 02:10:26 2020 +0200
+
+    project 1 completed
+
+commit 57f0438d90d3aa676138b888adf6635d5bd6550f
+Author: ilaria <ilaria1.milani@mail.polimi.it>
+Date:   Mon Apr 27 22:00:08 2020 +0200
+
+    adding iic and ini files
+
+commit f26141db13cbe5fdc12ca04cc79bec28c7b19971
+Author: ilaria <ilaria1.milani@mail.polimi.it>
+Date:   Sun Apr 26 23:36:20 2020 +0200
+
+    My first commit!

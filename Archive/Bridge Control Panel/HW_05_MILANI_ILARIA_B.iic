@@ -1,0 +1,7 @@
+;stringa selezione registro da leggere
+;w 08 00 p
+;stringa ricezione
+;r 08 x p
+;stringa scrittura: modifica lampeggio led blu con 00 led off, con FF led on, 7F lampeggio
+;w 08 00 3F p
+rx8 [h=A0] @0outX @1outX @0outY @1outY @0outZ @1outZ [t=C0]
