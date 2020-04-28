@@ -342,6 +342,6 @@ int main(void)
 }
 
 // error in the output value, to make it correct-ish I should do *4/128, then the value on the Z axis would be around 9.8
-// moreover the
+
 
 /* [] END OF FILE */
