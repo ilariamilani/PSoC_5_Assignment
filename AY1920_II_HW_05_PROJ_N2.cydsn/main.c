@@ -32,36 +32,46 @@
 /**
 *   \brief Address of the Control register 1
 */
-#define LIS3DH_CTRL_REG1 0x20
+#define LIS3DH_CTRL_REG1 0x20 
 
 /**
 *   \brief Hex value to set normal mode to the accelerator
 */
-#define LIS3DH_NORMAL_MODE_CTRL_REG1 0x47
+#define LIS3DH_NORMAL_MODE_CTRL_REG1 0x57 //0101 to set 100hz
+                                          //0111 normal mode and axis enabled
 
 /**
 *   \brief  Address of the Temperature Sensor Configuration register
 */
-#define LIS3DH_TEMP_CFG_REG 0x1F
+// #define LIS3DH_TEMP_CFG_REG 0x1F
 
-#define LIS3DH_TEMP_CFG_REG_ACTIVE 0xC0
+// #define LIS3DH_TEMP_CFG_REG_ACTIVE 0xC0
 
 /**
 *   \brief Address of the Control register 4
 */
-#define LIS3DH_CTRL_REG4 0x23
+#define LIS3DH_CTRL_REG4 0x23 
 
-#define LIS3DH_CTRL_REG4_BDU_ACTIVE 0x80
+#define LIS3DH_CTRL_REG4_BDU_ACTIVE 0x83 // set BDU active, and ±2.0 g FSR 
 
+/**
+*   \brief Address of the ADC output for the 3 axis, MSB (H) and LSB (L) register
+*/
+#define LIS3DH_OUT_X_L 0x28
+#define LIS3DH_OUT_X_H 0x29
+#define LIS3DH_OUT_Y_L 0x2A
+#define LIS3DH_OUT_Y_H 0x2B
+#define LIS3DH_OUT_Z_L 0x2C
+#define LIS3DH_OUT_Z_H 0x2D
 /**
 *   \brief Address of the ADC output LSB register
 */
-#define LIS3DH_OUT_ADC_3L 0x0C
+// #define LIS3DH_OUT_ADC_3L 0x0C
 
 /**
 *   \brief Address of the ADC output MSB register
 */
-#define LIS3DH_OUT_ADC_3H 0x0D
+// #define LIS3DH_OUT_ADC_3H 0x0D
 
 int main(void)
 {
@@ -186,48 +196,11 @@ int main(void)
         UART_Debug_PutString("Error occurred during I2C comm to read control register 1\r\n");   
     }
     
+    
      /******************************************/
-     /* I2C Reading Temperature sensor CFG reg */
+     /*   Reading and Writing on ctrl reg 4 */
      /******************************************/
 
-    uint8_t tmp_cfg_reg;
-
-    error = I2C_Peripheral_ReadRegister(LIS3DH_DEVICE_ADDRESS,
-                                        LIS3DH_TEMP_CFG_REG,
-                                        &tmp_cfg_reg);
-    
-    if (error == NO_ERROR)
-    {
-        sprintf(message, "TEMPERATURE CONFIG REGISTER: 0x%02X\r\n", tmp_cfg_reg);
-        UART_Debug_PutString(message); 
-    }
-    else
-    {
-        UART_Debug_PutString("Error occurred during I2C comm to read temperature config register\r\n");   
-    }
-    
-    
-    tmp_cfg_reg = LIS3DH_TEMP_CFG_REG_ACTIVE; // must be changed to the appropriate value
-    
-    error = I2C_Peripheral_WriteRegister(LIS3DH_DEVICE_ADDRESS,
-                                         LIS3DH_TEMP_CFG_REG,
-                                         tmp_cfg_reg);
-    
-    error = I2C_Peripheral_ReadRegister(LIS3DH_DEVICE_ADDRESS,
-                                        LIS3DH_TEMP_CFG_REG,
-                                        &tmp_cfg_reg);
-    
-    
-    if (error == NO_ERROR)
-    {
-        sprintf(message, "TEMPERATURE CONFIG REGISTER after being updated: 0x%02X\r\n", tmp_cfg_reg);
-        UART_Debug_PutString(message); 
-    }
-    else
-    {
-        UART_Debug_PutString("Error occurred during I2C comm to read temperature config register\r\n");   
-    }
-    
     uint8_t ctrl_reg4;
 
     error = I2C_Peripheral_ReadRegister(LIS3DH_DEVICE_ADDRESS,
@@ -245,7 +218,7 @@ int main(void)
     }
     
     
-    ctrl_reg4 = LIS3DH_CTRL_REG4_BDU_ACTIVE; // must be changed to the appropriate value
+    ctrl_reg4 = LIS3DH_CTRL_REG4_BDU_ACTIVE;
     
     error = I2C_Peripheral_WriteRegister(LIS3DH_DEVICE_ADDRESS,
                                          LIS3DH_CTRL_REG4,
@@ -266,37 +239,53 @@ int main(void)
         UART_Debug_PutString("Error occurred during I2C comm to read control register4\r\n");   
     }
     
-    int16_t OutTemp;
+    int16_t OutX;
+    int16_t OutY;
+    int16_t OutZ;
     uint8_t header = 0xA0;
     uint8_t footer = 0xC0;
-    uint8_t OutArray[4]; 
-    uint8_t TemperatureData[2];
+    uint8_t OutArray[8]; 
+    uint8_t Data[6];
     
     OutArray[0] = header;
-    OutArray[3] = footer;
+    OutArray[7] = footer;
     
     for(;;)
     {
         CyDelay(100);
         
         error = I2C_Peripheral_ReadRegisterMulti(LIS3DH_DEVICE_ADDRESS,
-                                                 LIS3DH_OUT_ADC_3L,
+                                                 LIS3DH_OUT_X_L,
                                                  2, // 2 byte to be read
-                                                 &TemperatureData[0]);
+                                                 &Data[0]);
+        error = I2C_Peripheral_ReadRegisterMulti(LIS3DH_DEVICE_ADDRESS,
+                                                 LIS3DH_OUT_Y_L,
+                                                 2, // 2 byte to be read
+                                                 &Data[2]);
+        error = I2C_Peripheral_ReadRegisterMulti(LIS3DH_DEVICE_ADDRESS,
+                                                 LIS3DH_OUT_Z_L,
+                                                 2, // 2 byte to be read
+                                                 &Data[4]);
         
         //error = I2C_Peripheral_ReadRegister(LIS3DH_DEVICE_ADDRESS,
-          //                                  LIS3DH_OUT_ADC_3L,
-            //                                &TemperatureData[0]);
+          //                                  LIS3DH_OUT_Z_L,
+            //                                &TemperatureData[4]);
         
         //error = I2C_Peripheral_ReadRegister(LIS3DH_DEVICE_ADDRESS,
-          //                                  LIS3DH_OUT_ADC_3H,
-            //                                &TemperatureData[1]);
+          //                                  LIS3DH_OUT_Z_H,
+            //                                &TemperatureData[5]);
         if(error == NO_ERROR)
         {
-            OutTemp = (int16)((TemperatureData[0] | (TemperatureData[1]<<8)))>>6;
-            OutArray[1] = (uint8_t)(OutTemp & 0xFF);
-            OutArray[2] = (uint8_t)(OutTemp >> 8);
-            UART_Debug_PutArray(OutArray, 4);
+            OutX = (int16)((Data[0] | (Data[1]<<8)))>>6;
+            OutY = (int16)((Data[2] | (Data[3]<<8)))>>6;
+            OutZ = (int16)((Data[4] | (Data[5]<<8)))>>6;
+            OutArray[1] = (uint8_t)(OutX & 0xFF);
+            OutArray[2] = (uint8_t)(OutX >> 8);
+            OutArray[3] = (uint8_t)(OutY & 0xFF);
+            OutArray[4] = (uint8_t)(OutY >> 8);
+            OutArray[5] = (uint8_t)(OutZ & 0xFF);
+            OutArray[6] = (uint8_t)(OutZ >> 8);
+            UART_Debug_PutArray(OutArray, 8);
         }
     }
 }
