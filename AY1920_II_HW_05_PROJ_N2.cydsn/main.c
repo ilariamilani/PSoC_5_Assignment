@@ -30,6 +30,14 @@
 #define LIS3DH_STATUS_REG 0x27
 
 /**
+*   \new Data on the Status register
+*/
+#define LIS3DH_STATUS_REG_NEWDATA 0x08 //if ZYXDA == 1
+#define LIS3DH_STATUS_REG_NEWDATAX 0x01 //if XDA == 1
+#define LIS3DH_STATUS_REG_NEWDATAY 0x02 //if YDA == 1
+#define LIS3DH_STATUS_REG_NEWDATAZ 0x04 //if ZDA == 1
+
+/**
 *   \brief Address of the Control register 1
 */
 #define LIS3DH_CTRL_REG1 0x20 
@@ -254,18 +262,59 @@ int main(void)
     {
         CyDelay(100);
         
-        error = I2C_Peripheral_ReadRegisterMulti(LIS3DH_DEVICE_ADDRESS,
+        /*      I2C Reading Status Register       */
+     
+    error = I2C_Peripheral_ReadRegister(LIS3DH_DEVICE_ADDRESS,
+                                        LIS3DH_STATUS_REG,
+                                        &status_register);
+    
+    if (error != NO_ERROR)
+    {
+        UART_Debug_PutString("Error occurred during I2C comm to read status register\r\n");   
+    }
+    
+    // if new data is available:
+        
+        if((LIS3DH_STATUS_REG & LIS3DH_STATUS_REG_NEWDATAX) == LIS3DH_STATUS_REG_NEWDATAX)
+        {
+            error = I2C_Peripheral_ReadRegisterMulti(LIS3DH_DEVICE_ADDRESS,
                                                  LIS3DH_OUT_X_L,
                                                  2, // 2 byte to be read
                                                  &Data[0]);
-        error = I2C_Peripheral_ReadRegisterMulti(LIS3DH_DEVICE_ADDRESS,
+            if(error == NO_ERROR)
+        {
+            OutX = (int16)((Data[0] | (Data[1]<<8)))>>6;
+            OutArray[1] = (uint8_t)(OutX & 0xFF);
+            OutArray[2] = (uint8_t)(OutX >> 8);
+        }
+        }
+        if((LIS3DH_STATUS_REG & LIS3DH_STATUS_REG_NEWDATAY) == LIS3DH_STATUS_REG_NEWDATAY)
+        {
+            error = I2C_Peripheral_ReadRegisterMulti(LIS3DH_DEVICE_ADDRESS,
                                                  LIS3DH_OUT_Y_L,
                                                  2, // 2 byte to be read
                                                  &Data[2]);
-        error = I2C_Peripheral_ReadRegisterMulti(LIS3DH_DEVICE_ADDRESS,
+            if(error == NO_ERROR)
+        {
+            OutY = (int16)((Data[2] | (Data[3]<<8)))>>6;
+            OutArray[3] = (uint8_t)(OutY & 0xFF);
+            OutArray[4] = (uint8_t)(OutY >> 8);
+        }
+        }
+        if((LIS3DH_STATUS_REG & LIS3DH_STATUS_REG_NEWDATAZ) == LIS3DH_STATUS_REG_NEWDATAZ)
+        {
+            error = I2C_Peripheral_ReadRegisterMulti(LIS3DH_DEVICE_ADDRESS,
                                                  LIS3DH_OUT_Z_L,
                                                  2, // 2 byte to be read
                                                  &Data[4]);
+            if(error == NO_ERROR)
+        {
+            OutZ = (int16)((Data[4] | (Data[5]<<8)))>>6;
+            OutArray[5] = (uint8_t)(OutZ & 0xFF);
+            OutArray[6] = (uint8_t)(OutZ >> 8);
+        }
+        }
+
         
         //error = I2C_Peripheral_ReadRegister(LIS3DH_DEVICE_ADDRESS,
           //                                  LIS3DH_OUT_Z_L,
@@ -274,19 +323,10 @@ int main(void)
         //error = I2C_Peripheral_ReadRegister(LIS3DH_DEVICE_ADDRESS,
           //                                  LIS3DH_OUT_Z_H,
             //                                &TemperatureData[5]);
-        if(error == NO_ERROR)
-        {
-            OutX = (int16)((Data[0] | (Data[1]<<8)))>>6;
-            OutY = (int16)((Data[2] | (Data[3]<<8)))>>6;
-            OutZ = (int16)((Data[4] | (Data[5]<<8)))>>6;
-            OutArray[1] = (uint8_t)(OutX & 0xFF);
-            OutArray[2] = (uint8_t)(OutX >> 8);
-            OutArray[3] = (uint8_t)(OutY & 0xFF);
-            OutArray[4] = (uint8_t)(OutY >> 8);
-            OutArray[5] = (uint8_t)(OutZ & 0xFF);
-            OutArray[6] = (uint8_t)(OutZ >> 8);
-            UART_Debug_PutArray(OutArray, 8);
-        }
+        
+        UART_Debug_PutArray(OutArray, 8);
+        
+    
     }
 }
 
