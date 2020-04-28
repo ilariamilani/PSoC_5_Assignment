@@ -39,20 +39,12 @@
 */
 #define LIS3DH_NORMAL_MODE_CTRL_REG1 0x57 //0101 to set 100hz
                                           //0111 normal mode and axis enabled
-
-/**
-*   \brief  Address of the Temperature Sensor Configuration register
-*/
-// #define LIS3DH_TEMP_CFG_REG 0x1F
-
-// #define LIS3DH_TEMP_CFG_REG_ACTIVE 0xC0
-
 /**
 *   \brief Address of the Control register 4
 */
 #define LIS3DH_CTRL_REG4 0x23 
 
-#define LIS3DH_CTRL_REG4_BDU_ACTIVE 0x83 // set BDU active, and ±2.0 g FSR 
+#define LIS3DH_CTRL_REG4_ACTIVE 0x83 // set BDU active, and ±2.0 g FSR 
 
 /**
 *   \brief Address of the ADC output for the 3 axis, MSB (H) and LSB (L) register
@@ -63,15 +55,7 @@
 #define LIS3DH_OUT_Y_H 0x2B
 #define LIS3DH_OUT_Z_L 0x2C
 #define LIS3DH_OUT_Z_H 0x2D
-/**
-*   \brief Address of the ADC output LSB register
-*/
-// #define LIS3DH_OUT_ADC_3L 0x0C
 
-/**
-*   \brief Address of the ADC output MSB register
-*/
-// #define LIS3DH_OUT_ADC_3H 0x0D
 
 int main(void)
 {
@@ -218,7 +202,7 @@ int main(void)
     }
     
     
-    ctrl_reg4 = LIS3DH_CTRL_REG4_BDU_ACTIVE;
+    ctrl_reg4 = LIS3DH_CTRL_REG4_ACTIVE;
     
     error = I2C_Peripheral_WriteRegister(LIS3DH_DEVICE_ADDRESS,
                                          LIS3DH_CTRL_REG4,
