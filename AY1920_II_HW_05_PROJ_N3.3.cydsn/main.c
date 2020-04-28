@@ -248,7 +248,7 @@ int main(void)
     OutArray_ms2[0] = header;
     OutArray_ms2[7] = footer;
     
-    float32 G = 9.80665;
+    float32 mg = 9.80665;
     
     for(;;)
     {
@@ -284,9 +284,9 @@ int main(void)
                                                                     // using 2/16 : error in the output value, to make it correct-ish I should do *2/128, 
                                                                     // then the value on the Z axis would be around 9.8
                                                                     // same for the other 2 axis
-            OutX_ms2 = ((int16)(OutX_ms2/(G/10000)));  // the measure in output will be moltiplied per 10000 and saved as an int16
+            OutX_ms2 = ((int16)(OutX_ms2/(mg/10000)));  // the measure in output will be moltiplied per 10000 and saved as an int16
                                                        // then I will divide it for 10000 in the Bridge Control Panel
-                                                       // testing it with *2/128/G/10000, I have a result with decimals,
+                                                       // testing it with *2/128/mg/10000, I have a result with decimals,
                                                        // which are not visible with the values currently setted
             
             OutArray_ms2[1] = (uint8_t)(OutX_ms2 & 0xFF);
@@ -307,7 +307,7 @@ int main(void)
             //OutArray[4] = (uint8_t)(OutY >> 8);
             
             OutY_ms2 = ((int16)((Data[2] | (Data[3]<<8)))>>4)*2/16;
-            OutY_ms2 = ((int16)(OutY_ms2/(G/10000)));
+            OutY_ms2 = ((int16)(OutY_ms2/(mg/10000)));
             OutArray_ms2[3] = (uint8_t)(OutY_ms2 & 0xFF);
             OutArray_ms2[4] = (uint8_t)(OutY_ms2 >> 8);
         }
@@ -325,7 +325,7 @@ int main(void)
             //OutArray[6] = (uint8_t)(OutZ >> 8);
             
             OutZ_ms2 = ((int16)((Data[4] | (Data[5]<<8)))>>4)*2/16;
-            OutZ_ms2 = ((int16)(OutZ_ms2/(G/10000)));
+            OutZ_ms2 = ((int16)(OutZ_ms2/(mg/10000)));
             OutArray_ms2[5] = (uint8_t)(OutZ_ms2 & 0xFF);
             OutArray_ms2[6] = (uint8_t)(OutZ_ms2 >> 8);
         }
